@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>fayko</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Segoe UI", sans-serif;
+}
+
+body{
+background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+min-height:200vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* Top Container */
+
+.hero{
+width:90%;
+max-width:900px;
+margin-top:80px;
+padding:60px;
+background:white;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+color:#ff4d6d;
+letter-spacing:3px;
+}
+
+/* Letter Container */
+
+.letter{
+width:90%;
+max-width:900px;
+margin-top:120px;
+padding:50px;
+background:white;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+line-height:1.8;
+font-size:18px;
+color:#444;
+}
+
+.button-box{
+text-align:center;
+margin-top:40px;
+}
+
+button{
+padding:14px 40px;
+font-size:18px;
+border:none;
+border-radius:40px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+background:#ff2f55;
+}
+
+/* Gift Container */
+
+#giftContainer{
+display:none;
+width:100%;
+height:100vh;
+margin-top:60px;
+}
+
+iframe{
+width:100%;
+height:100%;
+border:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<h1>fayko</h1>
+</div>
+
+<div class="letter">
+
+<p>
+My love,
+</p>
+
+<p>
+This little website is only a small place where my feelings live.  
+Every word here is something I wish I could say while looking into your eyes.
+</p>
+
+<p>
+Sometimes life moves fast, days pass quickly, and the world becomes loud.
+But even in the middle of all that noise, there is always one quiet thought
+that stays in my heart.
+</p>
+
+<p>
+You.
+</p>
+
+<p>
+You are the calm moment in the chaos, the soft light at the end of long days,
+and the reason simple things feel beautiful.
+</p>
+
+<p>
+If this page could hold all the things I feel, it would never end.
+But for now, I just want you to know something simple:
+</p>
+
+<p>
+You matter.  
+You are appreciated.  
+And someone out there thinks about you more than you know.
+</p>
+
+<div class="button-box">
+<button onclick="openGift()">Gift</button>
+</div>
+
+</div>
+
+<div id="giftContainer">
+<iframe src="https://raw.githubusercontent.com/sun0225SUN/Awesome-Love-Code/refs/heads/main/Web/032/index.html"></iframe>
+</div>
+
+<script>
+
+function openGift(){
+document.getElementById("giftContainer").style.display="block";
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+}
+
+</script>
+
+</body>
+</html>
