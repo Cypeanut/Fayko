@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Message</title>
+
+<style>
+
+body{
+margin:0;
+font-family:monospace;
+background:#ff9eb5;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:#ffd6b0;
+padding:50px;
+border-radius:20px;
+max-width:700px;
+text-align:center;
+position:relative;
+}
+
+h1,h2,p,pre{
+color:#ffb6c1;
+}
+
+button{
+margin-top:30px;
+padding:12px 25px;
+background:#ffb6c1;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+opacity:0.8;
+}
+
+.page{
+display:none;
+}
+
+.active{
+display:block;
+}
+
+/* HEART */
+
+.heart{
+position:relative;
+width:180px;
+height:180px;
+background:#ff4d6d;
+transform:rotate(45deg);
+margin:auto;
+
+box-shadow:
+0 0 20px #ff4d6d,
+0 0 40px #ff4d6d,
+0 0 80px #ff4d6d;
+
+animation:pulse 2s infinite;
+}
+
+.heart:before,
+.heart:after{
+content:"";
+position:absolute;
+width:180px;
+height:180px;
+background:#ff4d6d;
+border-radius:50%;
+}
+
+.heart:before{
+top:-90px;
+left:0;
+}
+
+.heart:after{
+left:-90px;
+top:0;
+}
+
+@keyframes pulse{
+0%{transform:rotate(45deg) scale(1)}
+50%{transform:rotate(45deg) scale(1.1)}
+100%{transform:rotate(45deg) scale(1)}
+}
+
+/* ORBIT TEXT */
+
+.orbit{
+position:absolute;
+width:400px;
+height:400px;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+animation:spin 10s linear infinite;
+}
+
+.name{
+position:absolute;
+top:0;
+left:50%;
+transform:translateX(-50%);
+color:#ffb6c1;
+font-size:20px;
+font-weight:bold;
+
+text-shadow:
+0 0 10px #ffb6c1,
+0 0 20px #ffb6c1,
+0 0 40px #ffb6c1;
+}
+
+@keyframes spin{
+0%{transform:translate(-50%,-50%) rotate(0deg)}
+100%{transform:translate(-50%,-50%) rotate(360deg)}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- PAGE 1 -->
+
+<div id="page1" class="page active">
+
+<pre>
+[ SYSTEM INITIALIZATION ]
+
+Connection Status : Stable
+Memory Database   : Loaded
+Trust Protocol    : Active
+Emotion Engine    : Running
+
+Preparing message...
+</pre>
+
+<button onclick="nextPage(2)">ACCESS MESSAGE</button>
+
+</div>
+
+<!-- PAGE 2 -->
+
+<div id="page2" class="page">
+
+<h2>Letter</h2>
+
+<p>
+Hey bestfriend,
+<br><br>
+I just wanted to say thank you for always being there.
+For every laugh, every random moment, and every time you listened.
+<br><br>
+You might not notice it sometimes,
+but your presence makes many things better.
+<br><br>
+No matter where life takes us,
+I hope our friendship always stays the same.
+</p>
+
+<button onclick="nextPage(3)">NEXT</button>
+
+</div>
+
+<!-- PAGE 3 -->
+
+<div id="page3" class="page">
+
+<h2>Fayko 💗</h2>
+
+<div class="orbit">
+<div class="name">
+Fayko Fayko Fayko Fayko Fayko Fayko Fayko Fayko
+</div>
+</div>
+
+<div class="heart"></div>
+
+</div>
+
+</div>
+
+<script>
+
+function nextPage(page){
+document.querySelectorAll(".page").forEach(p=>{
+p.classList.remove("active")
+})
+
+document.getElementById("page"+page).classList.add("active")
+}
+
+</script>
+
+</body>
+</html>
